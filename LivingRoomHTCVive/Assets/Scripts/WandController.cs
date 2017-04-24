@@ -26,7 +26,7 @@ public class WandController : MonoBehaviour {
     {
         if (controller == null)
         {
-            Debug.Log("Controller not initialized");
+            //Debug.Log("Controller not initialized");
             return;
         }
 
@@ -36,19 +36,15 @@ public class WandController : MonoBehaviour {
             float minDistance = float.MaxValue;
 
             float distance;
-            Debug.Log("FixedUpdater: objectsHoveringOver.length: " + objectsHoveringOver.Count);
             foreach (InteractableItems item in objectsHoveringOver)
             {
-                Debug.Log("Update :: objectHoveringOver :: item: " + item );
                 distance = (item.transform.position - transform.position).sqrMagnitude;
 
                 if (distance < minDistance)
                 {
                     minDistance = distance;
                     closestItem = item;
-                }
-
-                
+                }   
             }
 
             interactingItem = closestItem;
@@ -67,16 +63,13 @@ public class WandController : MonoBehaviour {
 
         if (controller.GetPressUp(triggerButton) && interactingItem != null)
         {
-            Debug.Log("WandController :: FixedUpdate : GetPressUp: " + interactingItem);
             interactingItem.EndInteraction(this);
         }
     }
 
     private void OnTriggerEnter(Collider collider)
-    {
-        
+    { 
         InteractableItems collidedItem = collider.GetComponent<InteractableItems>();
-        //Debug.Log("We are in the trigger :: collidedItem: " + collidedItem );
         if (collidedItem)
         {
             
@@ -86,13 +79,10 @@ public class WandController : MonoBehaviour {
 
     private void OnTriggerExit(Collider collider)
     {
-        Debug.Log("We are out of the trigger");
         InteractableItems collidedItem = collider.GetComponent<InteractableItems>();
         if (collidedItem)
         {
-            Debug.Log("We are out of the trigger: collidedItem: " + collidedItem );
             objectsHoveringOver.Remove(collidedItem);
         }
-        Debug.Log("We are out of the trigger: objectsHoveringOver.length: " + objectsHoveringOver.Count);
     }
 }

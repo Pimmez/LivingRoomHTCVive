@@ -6,8 +6,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 
-public class ItemLoading : MonoBehaviour
-{
+public class ItemLoading : MonoBehaviour{
 
     private Valve.VR.EVRButtonId touchpad = Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad;
     public SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)trackedObj.index); } }
@@ -16,7 +15,6 @@ public class ItemLoading : MonoBehaviour
     private ItemContaining itemCollection;
     public Text triggerL, gripL, gripR, touchL, current, change, switchs, bedroom, bathroom;
     private int counter = 0;
-    private bool languageChinese = true;
 
     // Use this for initialization
     void Start()
@@ -24,7 +22,6 @@ public class ItemLoading : MonoBehaviour
         trackedObj = GetComponent<SteamVR_TrackedObject>();
         itemCollection = ItemContaining.Load(Path.Combine(Application.dataPath, "Resources/languages.xml"));
 
-        //InvokeRepeating("TimerTime", 2, 3);    
         ChangeLanguage();
     }
 
@@ -34,9 +31,7 @@ public class ItemLoading : MonoBehaviour
         if (controller.GetPressDown(touchpad))
         {
             ChangeLanguage();
-        }
-       
-
+        }  
     }
 
     public void ChangeLanguage()
@@ -61,52 +56,6 @@ public class ItemLoading : MonoBehaviour
         }
 
     } 
-
-
-
-    /*
-    public void ButtonTEST()
-    {
-        languageChinese = !languageChinese;
-    }
-    */
-
-
-    /*
-    void TimerTime()
-    {
-        Debug.Log("TimerTime");
-
-        if (counter < itemCollection.AllDialogues[0].texten.Count)
-        {
-            current.text = itemCollection.AllDialogues[0].texten[counter];
-            counter++;
-        }
-        else
-        {
-            CancelInvoke("TimerTime");
-            textManager.DestroyXMLCanvas();
-        }
-
-    }
-
-    public void Button()
-    {
-        itemCollection.AllDialogues[0].id = 2;
-        //if counter is the same number as texten.Count, then destroy the given object
-        if (counter == itemCollection.AllDialogues[0].texten.Count)
-        {
-        //Destroy(test);
-        }
-       
-
-
-        grip.text = itemCollection.AllDialogues[0].texten[counter];
-        //infoText.text = itemCollection.AllDialogues[0].texten[counter];
-        counter++;
-    }
-    */
-
 }
 
 

@@ -5,15 +5,13 @@ using UnityEngine;
 public class ChangeRenderMaterial : MonoBehaviour{
 
     public Material[] materials;
-    public float changeInterval = 0.33F;
+    [SerializeField] private float changeInterval = 0.33F;
     public Renderer[] rends;
 
     private int counter;
 
     void Start()
     {
-        //rend = GetComponent<Renderer>();
-        //rend.enabled = true;
         counter = 0;
     }
 

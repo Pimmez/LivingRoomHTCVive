@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableItems : MonoBehaviour {
 
-    public Rigidbody rigidbody;
+    [SerializeField] private Rigidbody rigidbody;
 
     private bool currentlyInteracting;
 
@@ -34,7 +34,6 @@ public class InteractableItems : MonoBehaviour {
     {
         if (attachedWand && currentlyInteracting)
         {
-            //Debug.Log("Interactable :: UPdate");
             posDelta = attachedWand.transform.position - interactionPoint.position;
             this.rigidbody.velocity = posDelta * velocityFactor * Time.fixedDeltaTime;
 
@@ -52,7 +51,6 @@ public class InteractableItems : MonoBehaviour {
 
     public void BeginInteraction(WandController wand)
     {
-        Debug.Log("BeginInteraction :: WandController: " + wand );
         attachedWand = wand;
         interactionPoint.position = wand.transform.position;
         interactionPoint.rotation = wand.transform.rotation;

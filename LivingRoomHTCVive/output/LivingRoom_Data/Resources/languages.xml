@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [XmlRoot("LanguagesCollection")] || [XmlArray("Languages"), XmlArrayItem("Lang")]-->
+<LanguagesCollection>
+  <Languages>
+    <Lang><!--English -->
+      <TriggerButtonR>Grab Items</TriggerButtonR>
+      <TriggerButtonL>Grab Items</TriggerButtonL>
+      <GripButtonR>ColorPicker Pointer</GripButtonR>
+      <GripButtonL>ColorPicker</GripButtonL>
+      <CurrentLanguage>English</CurrentLanguage>
+      <TouchPadL>Teleport</TouchPadL>
+      <Changelanguage>Change Language</Changelanguage>
+      <LightSwitch>Touch the switch to turn the lights on/off</LightSwitch>
+      <WallRendererSwitch>Touch the button to change the wallpaper</WallRendererSwitch>
+    </Lang>
+    <Lang><!--Chinese -->
+      <TriggerButtonR>抓物品</TriggerButtonR>
+      <TriggerButtonL>抓物品</TriggerButtonL>
+      <GripButtonR>顏色指針</GripButtonR>
+      <GripButtonL>選色器</GripButtonL>
+      <CurrentLanguage>中文</CurrentLanguage>
+      <TouchPadL>傳送</TouchPadL>
+      <Changelanguage>改變語言</Changelanguage>
+      <LightSwitch>觸摸開關以打開/關閉燈</LightSwitch>
+      <WallRendererSwitch>觸摸按鈕更改壁紙</WallRendererSwitch>
+    </Lang>
+    <Lang><!--German -->
+      <TriggerButtonR>Gegenstände Greifen</TriggerButtonR>
+      <TriggerButtonL>Gegenstände Greifen</TriggerButtonL>
+      <GripButtonR>Farbwähler</GripButtonR>
+      <GripButtonL>Farbpalette</GripButtonL>
+      <CurrentLanguage>German</CurrentLanguage>
+      <TouchPadL>Teleportieren</TouchPadL>
+      <Changelanguage>Sprache ändern</Changelanguage>
+      <LightSwitch>Berühren Sie den Schalter, um die Lichter ein- oder auszuschalten</LightSwitch>
+      <WallRendererSwitch>Tippen Sie auf die Schaltfläche, um das Hintergrundbild zu ändern</WallRendererSwitch>
+    </Lang>
+    <Lang><!--French -->
+      <TriggerButtonR>Objets Grab</TriggerButtonR>
+      <TriggerButtonL>Objets Grab</TriggerButtonL>
+      <GripButtonR>Pointeur de couleur</GripButtonR>
+      <GripButtonL>pipette à couleurs</GripButtonL>
+      <CurrentLanguage>Français</CurrentLanguage>
+      <TouchPadL>Teleport</TouchPadL>
+      <Changelanguage>Changer de langue</Changelanguage>
+      <LightSwitch>Appuyez sur le bouton pour allumer / éteindre les </LightSwitch>
+      <WallRendererSwitch>Appuyez sur le bouton pour changer le fond d'écran</WallRendererSwitch>
+    </Lang>
+  </Languages>
+</LanguagesCollection>
